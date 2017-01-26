@@ -1,0 +1,112 @@
+default_view:
+  name: INFO
+  icon: mdi:home
+  view: yes
+  entities:
+  - group.weather
+  - group.network
+  - group.luces
+  - group.gente
+  - group.pihole
+  - group.media
+  - persistent_notification.update_available
+
+Servidores:
+  view: yes
+  entities:
+  - group.kerrigan
+  - group.overseer
+  - group.defiler
+  - group.tincNode
+  - group.piBlog
+  - group.piHole
+
+
+Defiler:
+  entities:
+  - sensor.defiler_cpu_load
+  - sensor.defiler_disk_use_2
+  - sensor.defiler_ram_use_2
+  - sensor.defiler_swap_use_2
+
+Overseer:
+  entities:
+  - sensor.overseer_cpu_load
+  - sensor.overseer_disk_use_2
+  - sensor.overseer_ram_use_2
+  - sensor.overseer_swap_use_2
+
+Kerrigan:
+  entities:
+  - sensor.kerrigan_cpu_load
+  - sensor.kerrigan_disk_use_2
+  - sensor.kerrigan_ram_use_2
+  - sensor.kerrigan_swap_use_2
+
+tincNode:
+  entities:
+  - sensor.tincNode_cpu_load
+  - sensor.tincNode_disk_use_2
+  - sensor.tincNode_ram_use_2
+  - sensor.tincNode_swap_use_2
+
+piBlog:
+  entities:
+  - sensor.piBlog_cpu_load
+  - sensor.piBlog_disk_use_2
+  - sensor.piBlog_ram_use_2
+  - sensor.piBlog_swap_use_2
+
+piGujero:
+  entities:
+  - sensor.piGujero_cpu_load
+  - sensor.piGujero_disk_use_2
+  - sensor.piGujero_ram_use_2
+  - sensor.piGujero_swap_use_2
+
+network:
+  entities:
+  - sensor.transmission_status
+  - sensor.transmission_down_speed
+  - sensor.transmission_up_speed
+  - sensor.speedtest_ping
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+
+
+weather:
+  entities:
+  - weather.openweathermap
+  - sensor.pws_temp_c
+  - sensor.pws_wind_kph
+  - sensor.pws_wind_dir
+  - sensor.pws_relative_humidity
+  - sensor.owm_rain
+  - sensor.pws_precip_today_metric
+  - sensor.own_cloud_coverage
+  - sensor.pws_pressure_mb
+  - sensor.waqi_penyeta_castello_valencia
+
+luces:
+  entities:
+  - light.esquina_salon
+  - light.lampara
+  - light.ventana_salon
+
+gente:
+  entities:
+   - device_tracker.devicename
+   - device_tracker.androidec25a6abbf73e96dhome
+
+
+pihole:
+  entities:
+   - sensor.pihole
+
+
+media:
+  entities:
+   - media_player.pinchocast
+   - media_player.rasplecs
+
+

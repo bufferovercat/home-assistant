@@ -1,0 +1,35 @@
+  - name: salon normal
+    entities:
+        light.esquina_salon:
+            state: on
+            transition: 2
+            brightness: 254
+            xy_color: [ 0.3932 , 0.2997 ]
+        light.lampara:
+            state: on
+            transition: 2
+            brightness: 254
+            xy_color: [ 0.3932 , 0.2997 ]
+        light.ventana_salon:
+            state: on
+            transition: 2
+            brightness: 254
+            xy_color: [ 0.3932 , 0.2997 ]
+
+  - name: salon dim
+    entities:
+        light.esquina_salon:
+            state: on
+            transition: 2
+            brightness: 90
+            xy_color: [ 0.169 , 0.0428 ]
+        light.lampara:
+            state: on
+            transition: 2
+            brightness: 90
+            xy_color: [ 0.169 , 0.0428 ]
+        light.ventana_salon:
+            state: on
+            transition: 2
+            brightness: 90
+            xy_color: [ 0.169 , 0.0428 ]

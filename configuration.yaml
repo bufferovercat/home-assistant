@@ -1,0 +1,57 @@
+homeassistant:
+  name: casaCastellon
+  latitude: !secret latitudCS 
+  longitude: !secret longitudCS
+  elevation: 29
+  unit_system: metric
+  time_zone: Europe/Madrid
+  customize: !include customize.yaml
+
+frontend:
+
+http:
+   api_password: !secret httpPassword
+
+panel_iframe:
+  audio:
+    title: Subsonic
+    icon: mdi:music-box-outline
+    url: !secret subsonicURL
+
+notify:
+  - name: telegrambot
+    platform: telegram
+    api_key: !secret telegramAPI
+    chat_id: !secret telegramCHATID
+
+
+updater:
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+scene: !include scene.yaml
+
+automation: !include automation.yaml
+
+weather:
+  - platform: openweathermap
+    api_key: !secret OWMapikey
+    latitude: !secret latitudCS
+    longitude: !secret longitudCS
+
+sensor: !include sensor.yaml
+
+
+group: !include group.yaml
+
+
+device_tracker: !include deviceTracker.yaml
+

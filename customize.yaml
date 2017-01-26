@@ -1,0 +1,152 @@
+     sensor.transmission_down_speed:
+       icon: mdi:cloud-download
+       friendly_name: "Descarga BT"
+
+     sensor.transmission_up_speed:
+       icon: mdi:cloud-upload
+       friendly_name: "Subida BT"
+
+     sensor.pws_wind_kph:
+       friendly_name: "Velocidad viento"
+       icon: mdi:weather-windy
+
+     sensor.pws_wind_dir: 
+       friendly_name: "Direccion viento"
+       icon: mdi:weather-windy-variant
+     
+     sensor.pws_temp_c:
+       friendly_name: "Temp exterior"
+       icon: mdi:temperature-celsius
+
+     sensor.pws_relative_humidity:
+       friendly_name: "Humedad"
+       icon: mdi:cup-water
+
+     sensor.pws_pressure_mb:
+       friendly_name: "Presion"
+       icon: mdi:gas-cylinder
+
+     sensor.owm_rain:
+       friendly_name: "Llueve"
+       icon: mdi:weather-rainy
+
+     sensor.owm_cloud_coverage:
+       friendly_name: "Nubes"
+       icon: mdi:weather-cloudy
+
+     sensor.pws_precip_today_metric:
+       friendly_name: "Cuanto ha llovido"
+       icon: mdi:water
+     
+     sensor.waqi_penyeta_castello_valencia:
+       friendly_name: "Calidad del aire"
+       icon: mdi:cloud
+
+     sensor.speedtest_ping:
+       icon: mdi:speedometer
+       friendly_name: Ping
+
+     sensor.speedtest_download:
+       icon: mdi:download
+       friendly_name: Speedtest Bajada
+
+     sensor.speedtest_upload:
+       icon: mdi:upload
+       friendly_name: Speedtest Subida
+
+
+     sensor.piGujero_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.piGujero_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.piGujero_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.piGujero_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
+
+     sensor.piBlog_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.piBlog_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.piBlog_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.piBlog_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
+
+     sensor.tincNode_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.tincNode_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.tincNode_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.tincNode_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
+
+     sensor.defiler_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.defiler_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.defiler_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.defiler_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
+
+     sensor.overseer_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.overseer_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.overseer_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.overseer_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
+
+     sensor.kerrigan_cpu_load:
+       icon: mdi:fire
+       friendly_name: carga CPU
+
+     sensor.kerrigan_disk_use_2:
+       icon: mdi:harddisk
+       friendly_name: uso HD
+
+     sensor.kerrigan_ram_use_2:
+       icon: mdi:chip
+       friendly_name: uso RAM
+
+     sensor.kerrigan_swap_use_2:
+       icon: mdi:folder-multiple-outline
+       friendly_name: uso SWAP
