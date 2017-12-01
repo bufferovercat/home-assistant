@@ -8,7 +8,6 @@ Stuff included:
 - Transmission Torrent
 - ChromeCast
 - Weather Underground
-- Server statistic with glances
 
 Automations:
 
