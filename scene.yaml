@@ -15,6 +15,9 @@
             transition: 2
             brightness: 254
             xy_color: [ 0.3932 , 0.2997 ]
+        light.leds_xiaomi:    
+            state: off
+
 
   - name: salon dim
     entities:
@@ -33,3 +36,6 @@
             transition: 2
             brightness: 90
             xy_color: [ 0.169 , 0.0428 ]
+        light.leds_xiaomi:
+            state: on
+

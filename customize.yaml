@@ -55,98 +55,30 @@
        friendly_name: Speedtest Subida
 
 
-     sensor.piGujero_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
+     light.gateway_light_34ce0091ea4f:
+       friendly_name: Luz Xiaomi Gateway
 
-     sensor.piGujero_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
+     binary_sensor.door_window_sensor_158d00019fbde4:
+       friendly_name: Puerta Casa
+       icon: mdi:door-open
 
-     sensor.piGujero_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
+     binary_sensor.motion_sensor_158d0001d970ad:
+       friendly_name: Movimiento Pasillo
 
-     sensor.piGujero_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
+     sensor.humidity_158d0001dcd444:
+       friendly_name: Humedad CPD
 
-     sensor.piBlog_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
+     sensor.humidity_158d0001ddb796:
+       friendly_name: Humedad Cocina
 
-     sensor.piBlog_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
+     sensor.illumination_34ce0091ea4f:
+       friendly_name: Cantidad luz Gateway
 
-     sensor.piBlog_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
+     sensor.temperature_158d0001dcd444:
+       friendly_name: Temperatura CPD
 
-     sensor.piBlog_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
-
-     sensor.tincNode_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
-
-     sensor.tincNode_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
-
-     sensor.tincNode_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
-
-     sensor.tincNode_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
-
-     sensor.defiler_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
-
-     sensor.defiler_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
-
-     sensor.defiler_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
-
-     sensor.defiler_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
-
-     sensor.overseer_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
-
-     sensor.overseer_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
-
-     sensor.overseer_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
-
-     sensor.overseer_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
-
-     sensor.kerrigan_cpu_load:
-       icon: mdi:fire
-       friendly_name: carga CPU
-
-     sensor.kerrigan_disk_use_2:
-       icon: mdi:harddisk
-       friendly_name: uso HD
-
-     sensor.kerrigan_ram_use_2:
-       icon: mdi:chip
-       friendly_name: uso RAM
-
-     sensor.kerrigan_swap_use_2:
-       icon: mdi:folder-multiple-outline
-       friendly_name: uso SWAP
+     sensor.temperature_158d0001ddb796:
+       friendly_name: Temperatura Cocina
+    
+     binary_sensor.motion_sensor_158d00016be602: 
+       friendly_name: Movimiento Puerta

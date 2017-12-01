@@ -1,2 +1,5 @@
-  - platform: gpslogger
 
+ - platform: snmp
+   host: !secret ippfsense
+   community: !secret pfsensecommunity
+   baseoid: 1.3.6.1.2.1.4.22.1.2

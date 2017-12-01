@@ -1,29 +1,33 @@
 homeassistant:
   name: casaCastellon
-  latitude: !secret latitudCS 
+  latitude: !secret latitudCS
   longitude: !secret longitudCS
   elevation: 29
   unit_system: metric
   time_zone: Europe/Madrid
   customize: !include customize.yaml
 
+
 frontend:
 
+config:
+
 http:
-   api_password: !secret httpPassword
+  api_password: !secret httpPassword
+  ssl_certificate: !secret certificatepath
+  ssl_key: !secret keypath
 
-panel_iframe:
-  audio:
-    title: Subsonic
-    icon: mdi:music-box-outline
-    url: !secret subsonicURL
 
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegramAPI
+    allowed_chat_ids:
+      - !secret telegramCHATID
+    
 notify:
   - name: telegrambot
     platform: telegram
-    api_key: !secret telegramAPI
     chat_id: !secret telegramCHATID
-
 
 updater:
 
@@ -37,21 +41,70 @@ logbook:
 
 sun:
 
-scene: !include scene.yaml
-
-automation: !include automation.yaml
-
-weather:
-  - platform: openweathermap
-    api_key: !secret OWMapikey
-    latitude: !secret latitudCS
-    longitude: !secret longitudCS
-
 sensor: !include sensor.yaml
 
+mqtt: 
+  
+tts:
+  - platform: google
 
-group: !include group.yaml
-
+scene: !include scene.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
 
 device_tracker: !include deviceTracker.yaml
 
+light:
+  - platform: mqtt
+    name: "luz cocina"
+    state_topic: "stat/sonoff/POWER"
+    command_topic: "cmnd/sonoff/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+  
+  - platform: yeelight
+    devices:
+      !secret ipyeelight:
+        name: leds xiaomi
+        transition: 1000
+
+camera:
+  - platform: ffmpeg
+    name: Cam
+    input: -rtsp_transport tcp -i !secret xiaofang
+
+
+
+
+binary_sensor:
+  - platform: mqtt
+    name: "sonoff-workbench lwt"
+    state_topic: "tele/sonoff-workbench/LWT"
+    value_template: "{{ value }}"
+    payload_on: "Online"
+    payload_off: "Offline"
+    device_class: connectivity
+
+
+switch:
+  - platform: mqtt
+    name: "sonoff-workbench"
+    state_topic: "stat/sonoff-workbench/POWER"
+    command_topic: "cmnd/sonoff-workbench/POWER"
+    qos: 1
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
+
+logger:
+  default: info
+  logs:
+    homeassistant.components.mqtt: debug
+
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: !secret aqarakey

@@ -68,122 +68,10 @@
       - wind_mph
       - wind_string
 
-  - platform: glances
-    host: !secret ipdefiler
-    name: Defiler
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
-
-  - platform: glances
-    host: !secret ipoverseer
-    name: Overseer
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
-
-  - platform: glances
-    host: !secret iptincNode
-    name: tincNode
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
-
-  - platform: glances
-    host: !secret ipkerrigan
-    name: Kerrigan
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
-
-  - platform: glances
-    host: !secret ippiBlog
-    name: piBlog
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
-
-  - platform: glances
-    host: !secret ippiGujero
-    name: piGujero
-    resources:
-    - 'disk_use_percent'
-    - 'disk_use'
-    - 'disk_free'
-    - 'memory_use_percent'
-    - 'memory_use'
-    - 'memory_free'
-    - 'swap_use_percent'
-    - 'swap_use'
-    - 'swap_free'
-    - 'processor_load'
-    - 'process_running'
-    - 'process_total'
-    - 'process_thread'
-    - 'process_sleeping'
 
 
   - platform: waqi
+    token: !secret waqitoken
     locations:
       - penyeta
 
@@ -193,4 +81,34 @@
       - download
       - upload
 
+
+  - platform: mqtt
+    name: "Temperatura interior"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json['DHT22'].Temperature }}"
+    unit_of_measurement: "°C"
+
+  - platform: mqtt
+    name: "Humedad interior"
+    state_topic: "tele/sonoff/SENSOR"
+    value_template: "{{ value_json['DHT22'].Humidity }}"
+    unit_of_measurement: "%"
+
+  - platform: mqtt
+    name: "sonoff-workbench energy"
+    state_topic: "tele/sonoff-workbench/ENERGY"
+    value_template: "{{ value_json.energy_delta }}"
+    unit_of_measurement: "kWh"
+  
+  - platform: mqtt
+    name: "sonoff-workbench power"
+    state_topic: "tele/sonoff-workbench/ENERGY"
+    value_template: "{{ value_json.power }}"
+    unit_of_measurement: "W"
+  
+  - platform: mqtt
+    name: "sonoff-workbench voltage"
+    state_topic: "tele/sonoff-workbench/ENERGY"
+    value_template: "{{ value_json.voltage }}"
+    unit_of_measurement: "V"
 
