@@ -10,6 +10,7 @@ default_view:
   - group.pihole
   - group.media
   - group.domotica
+  - group.netdata
   - persistent_notification.update_available
 
 weather:
@@ -41,6 +42,7 @@ domotica:
 
 luces:
   entities:
+  - automation.media_player_playing
   - light.esquina_salon
   - light.lampara
   - light.ventana_salon
@@ -82,4 +84,21 @@ network:
    - sensor.transmission_status
    - sensor.transmission_up_speed
    
-
+netdata:
+  entities:
+   - sensor.protati_cpu_guest
+   - sensor.protati_cpu_iowait
+   - sensor.protati_cpu_softirq
+   - sensor.protati_cpu_system
+   - sensor.protati_cpu_user
+   - sensor.protati_ipv4_in
+   - sensor.protati_ipv4_out
+   - sensor.protati_processes_blocked
+   - sensor.protati_processes_running
+   - sensor.protati_ram_cached
+   - sensor.protati_ram_free
+   - sensor.protati_ram_used
+   - sensor.protati_system_io_in
+   - sensor.protati_system_io_out
+   - sensor.protati_system_load
+   - sensor.protati_uptime

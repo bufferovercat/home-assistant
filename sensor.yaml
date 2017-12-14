@@ -112,3 +112,30 @@
     value_template: "{{ value_json.voltage }}"
     unit_of_measurement: "V"
 
+  - platform: netdata
+    host: !secret ipprotati
+    name: protati
+    resources:
+    - memory_free
+    - memory_used
+    - memory_cached
+    - ipv4_in
+    - ipv4_out
+    - cpu_iowait
+    - cpu_user
+    - cpu_system
+    - cpu_softirq
+    - cpu_guest
+    - processes_running
+    - processes_blocked
+    - system_load
+    - system_io_in
+    - system_io_out
+#    - disk_free
+    - uptime
+#    - connections    
+
+  - platform: netdata
+    host: !secret ipviper
+    name: viper
+
